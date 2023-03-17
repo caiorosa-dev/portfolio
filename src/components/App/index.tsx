@@ -1,6 +1,7 @@
 import GlobalStyle from '../../assets/styles/global';
 import HeaderSection from '../HeaderSection';
 import IntroductionSection from '../IntroductionSection';
+import TechnologiesSection from '../TechnologiesSection';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <GlobalStyle />
       <HeaderSection />
       <IntroductionSection />
+      <TechnologiesSection />
     </>
   );
 }
