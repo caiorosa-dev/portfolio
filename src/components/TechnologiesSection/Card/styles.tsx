@@ -4,7 +4,8 @@ export const Container = styled.div`
   box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.05);
   border-radius: 48px;
 
-  width: 424px;
+  max-width: 424px;
+  width: 100%;
 
   padding: 40px;
   display: flex;
