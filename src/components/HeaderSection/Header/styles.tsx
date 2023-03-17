@@ -11,6 +11,14 @@ export const Container = styled.header`
   @media (max-width: 768px) {
     position: relative;
   }
+
+  @media (max-width: 500px) {
+    padding: 32px 64px;
+  }
+
+  @media (max-width: 400px) {
+    padding: 16px;
+  }
 `;
 
 export const LogoText = styled.h1`
