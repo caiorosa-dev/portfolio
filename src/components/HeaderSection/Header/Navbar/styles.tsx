@@ -15,6 +15,10 @@ export const Container = styled.nav`
     align-items: center;
     color: white;
 
+    @media (max-width: 768px) {
+      color: #1E1E1E;
+    }
+
     background: none;
     height: 100%;
   }

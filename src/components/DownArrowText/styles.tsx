@@ -23,7 +23,7 @@ export const Container = styled.div`
   align-items: center;
   color: #1E1E1E;
   cursor: default;
-  animation: ${levitate} 1.5s ease-in-out infinite;
+  animation: ${levitate} 1.5s ease-out infinite;
 
   .icon {
     height: 24px;

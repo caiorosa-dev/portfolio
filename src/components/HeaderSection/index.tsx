@@ -14,7 +14,7 @@ export default function HeaderSection() {
       <Background />
 
       <Container>
-        <TitleText headerText="Caio Rosa" title="Hello, I am aFull Stack   Developer." />
+        <TitleText headerText="Caio Rosa" title="Hello, I am aFull Stack     Developer." />
 
         <Image src={RocketImage} alt="Rocket 3d illustration" />
       </Container>
