@@ -4,6 +4,10 @@ export const Container = styled.div`
   max-width: 450px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 500px) {
+    max-width: 300px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -13,6 +17,10 @@ export const Title = styled.h1`
 
   @media (max-width: 768px) {
     font-size: 64px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 48px;
   }
 `;
 
