@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+const ContainerStyle = styled.div`
   max-width: 450px;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,15 @@ export const Container = styled.div`
   }
 `;
 
-export const Title = styled.h1`
+export const Container = styled(ContainerStyle)<{ maxWidth?: number, mediaWidth?: number }>`
+  max-width: ${({ maxWidth }) => `${maxWidth}px`};
+
+  @media (max-width: 768px) {
+    max-width: ${({ mediaWidth }) => `${mediaWidth}px`};
+  }
+`;
+
+const TitleStyle = styled.h1`
   color: #1E1E1E;
   font-size: 72px;
   font-weight: 600;
@@ -22,6 +30,10 @@ export const Title = styled.h1`
   @media (max-width: 500px) {
     font-size: 48px;
   }
+`;
+
+export const Title = styled(TitleStyle)<{ margin?: number }>`
+  margin-bottom: ${({ margin }) => `${margin}px`};
 `;
 
 export const HeaderContainer = styled.div`

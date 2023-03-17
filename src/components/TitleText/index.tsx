@@ -1,5 +1,4 @@
 /* eslint-disable react/no-array-index-key */
-import React, { ReactNode } from 'react';
 import Fade from 'react-reveal/Fade';
 
 import {
@@ -9,12 +8,17 @@ import {
 type Props = {
   headerText: string;
   title: string;
-  children?: ReactNode;
+  children?: any;
+  maxWidth?: number;
+  mediaWidth?: number;
+  margin?: number;
 };
 
-export default function TitleText({ headerText, title, children = null }: Props) {
+export default function TitleText({
+  headerText, title, children = null, maxWidth, margin, mediaWidth,
+}: Props) {
   return (
-    <Container>
+    <Container maxWidth={maxWidth} mediaWidth={mediaWidth}>
       <Fade top cascade>
         <HeaderContainer>
           <Line />
@@ -28,7 +32,7 @@ export default function TitleText({ headerText, title, children = null }: Props)
         </HeaderContainer>
       </Fade>
 
-      <Title>
+      <Title margin={margin}>
         <Fade top cascade>
           { title }
         </Fade>
