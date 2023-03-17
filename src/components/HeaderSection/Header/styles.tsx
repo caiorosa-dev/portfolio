@@ -7,6 +7,10 @@ export const Container = styled.header`
   width: 100%;
 
   padding: 32px 120px;
+
+  @media (max-width: 768px) {
+    position: relative;
+  }
 `;
 
 export const LogoText = styled.h1`

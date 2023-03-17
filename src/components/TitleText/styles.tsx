@@ -10,6 +10,10 @@ export const Title = styled.h1`
   color: #1E1E1E;
   font-size: 72px;
   font-weight: 600;
+
+  @media (max-width: 768px) {
+    font-size: 64px;
+  }
 `;
 
 export const HeaderContainer = styled.div`
