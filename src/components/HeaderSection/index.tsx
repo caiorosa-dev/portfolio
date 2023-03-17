@@ -1,27 +1,28 @@
 import Header from './Header';
 import {
-  Background, Container, Footer, Image, Section,
+  Background, Footer, Image, LargerSection,
 } from './styles';
 
 import RocketImage from '../../assets/images/rocket.png';
 import TitleText from '../TitleText';
 import DownArrowText from '../DownArrowText';
+import SectionContainer from '../SectionContainer';
 
 export default function HeaderSection() {
   return (
-    <Section>
+    <LargerSection>
       <Header />
       <Background />
 
-      <Container>
+      <SectionContainer>
         <TitleText headerText="Caio Rosa" title="Hello, I am aFull Stack     Developer." />
 
         <Image src={RocketImage} alt="Rocket 3d illustration" />
-      </Container>
+      </SectionContainer>
 
       <Footer>
         <DownArrowText>Scroll Down</DownArrowText>
       </Footer>
-    </Section>
+    </LargerSection>
   );
 }
