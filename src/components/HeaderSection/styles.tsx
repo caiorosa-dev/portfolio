@@ -28,6 +28,10 @@ export const Footer = styled.footer`
   position: absolute;
   bottom: 0;
 
+  @media (max-width: 1540px) {
+    padding: 32px 120px;
+  }
+
   @media (max-width: 768px) {
     padding: 64px 100px;
     bottom: 67.5vh;

@@ -5,6 +5,10 @@ export const Footer = styled.footer`
   position: absolute;
   bottom: 0;
 
+  @media (max-width: 1540px) {
+    padding: 32px 120px;
+  }
+
   @media (min-width: 768px) {
     right: 0;
   }
