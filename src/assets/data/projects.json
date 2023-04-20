@@ -1,9 +1,16 @@
 [
   {
     "id": "1",
-    "image": "to-do-img.png",
+    "image": "to-do-app.png",
     "name": "To do App",
-    "description": "Built",
-    "categoryId": "0"
+    "description": "Built using AdonisJS, NuxtJS, MySQL and Typescript.",
+    "categoryId": "2"
+  },
+  {
+    "id": "2",
+    "image": "portfolio.png",
+    "name": "Portfolio",
+    "description": "Built with ReactJS, Express and PostgreeSQL.",
+    "categoryId": "1"
   }
 ]
