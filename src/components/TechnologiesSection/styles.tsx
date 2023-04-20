@@ -11,9 +11,10 @@ export const Container = styled(SectionContainer)`
 
 export const CardList = styled.div`
   height: 100%;
-  display: flex;
-  justify-content: space-between;
-  gap: 64px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 72px;
 
   @media (max-width: 1200px) {
     flex-direction: column;
