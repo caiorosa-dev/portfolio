@@ -2,23 +2,21 @@
 import Fade from 'react-reveal/Fade';
 
 import {
-  Container, HeaderContainer, Line, Text, Title,
+  Container, HeaderContainer, Line, Text, Title, Titles,
 } from './styles';
 
 type Props = {
   headerText: string;
   title: string;
   children?: any;
-  maxWidth?: number;
-  mediaWidth?: number;
   margin?: number;
 };
 
 export default function TitleText({
-  headerText, title, children = null, maxWidth, margin, mediaWidth,
+  headerText, title, children = null, margin,
 }: Props) {
   return (
-    <Container maxWidth={maxWidth} mediaWidth={mediaWidth}>
+    <Container>
       <Fade top cascade>
         <HeaderContainer>
           <Line />
@@ -32,11 +30,13 @@ export default function TitleText({
         </HeaderContainer>
       </Fade>
 
-      <Title margin={margin}>
-        <Fade top cascade>
-          { title }
-        </Fade>
-      </Title>
+      <Titles margin={margin}>
+        { title.split('\\n').map((value, i) => (
+          <Fade top cascade>
+            <Title key={i}>{value}</Title>
+          </Fade>
+        )) }
+      </Titles>
 
       {children}
     </Container>

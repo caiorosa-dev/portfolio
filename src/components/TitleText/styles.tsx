@@ -1,24 +1,11 @@
 import styled from 'styled-components';
 
-const ContainerStyle = styled.div`
-  max-width: 450px;
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
-
-  @media (max-width: 500px) {
-    max-width: 300px;
-  }
 `;
 
-export const Container = styled(ContainerStyle)<{ maxWidth?: number, mediaWidth?: number }>`
-  max-width: ${({ maxWidth }) => `${maxWidth}px`};
-
-  @media (max-width: 768px) {
-    max-width: ${({ mediaWidth }) => `${mediaWidth}px`};
-  }
-`;
-
-const TitleStyle = styled.h1`
+export const Title = styled.h1`
   color: #1E1E1E;
   font-size: 72px;
   font-weight: 600;
@@ -32,7 +19,9 @@ const TitleStyle = styled.h1`
   }
 `;
 
-export const Title = styled(TitleStyle)<{ margin?: number }>`
+const TitlesStyle = styled.div``;
+
+export const Titles = styled(TitlesStyle)<{ margin?: number }>`
   margin-bottom: ${({ margin }) => `${margin}px`};
 `;
 

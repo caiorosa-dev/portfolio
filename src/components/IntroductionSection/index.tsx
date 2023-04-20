@@ -17,7 +17,7 @@ export default function IntroductionSection() {
           <Image src={ManOnRocketImage} alt="Man on a rocket" />
         </Fade>
 
-        <TitleText headerText="But, what I do?" title="I want to makeyour dreams  available to      the world!" maxWidth={550} margin={16} mediaWidth={400}>
+        <TitleText headerText="But, what I do?" title="I want to make\nyour dreams\navailable to\nthe world!" margin={16}>
           <Fade top>
             <Button type="button">
               <EnvelopeIcon className="icon" />

@@ -1,6 +1,7 @@
 import GlobalStyle from '../../assets/styles/global';
 import HeaderSection from '../HeaderSection';
 import IntroductionSection from '../IntroductionSection';
+import ProjectsSection from '../ProjectsSection';
 import TechnologiesSection from '../TechnologiesSection';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <HeaderSection />
       <IntroductionSection />
       <TechnologiesSection />
+      <ProjectsSection />
     </>
   );
 }

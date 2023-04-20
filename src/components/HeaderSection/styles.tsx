@@ -49,8 +49,7 @@ export const Image = styled.img`
 
   @media (max-width: 1540px) {
     height: 37vw;
-    rotate: 5deg;
-    transform: translateX(100px);
+    transform: translateX(50px);
   }
 
   @media (max-width: 768px) {

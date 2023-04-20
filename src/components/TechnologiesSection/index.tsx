@@ -12,9 +12,9 @@ export default function TechnologiesSection() {
   return (
     <Section>
       <Container>
-        <TitleText headerText="About my work" title="Technologies that i use" maxWidth={850} mediaWidth={500} />
+        <TitleText headerText="About my work" title="Technologies that i use" />
         <CardList>
-          <Card name="Tools" icon={FlashIcon} color="#EF4444">
+          <Card name="Langs & Tools" icon={FlashIcon} color="#EF4444">
             <Fade top cascade>
               <li>HTML</li>
               <li>CSS</li>
