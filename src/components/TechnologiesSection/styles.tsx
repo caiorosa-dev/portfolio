@@ -13,10 +13,9 @@ export const CardList = styled.div`
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-gap: 72px;
 
   @media (max-width: 1200px) {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 `;

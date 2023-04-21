@@ -39,9 +39,17 @@ export const TextsContainer = styled.div`
 
 export const Image = styled.img`
   position: relative;
-  height: 360px;
+  max-height: 360px;
   border-top-left-radius: 48px;
   border-top-right-radius: 48px;
+
+  @media (max-width: 1200px) {
+    max-height: 240px;
+  }
+
+  @media (max-width: 500px) {
+    max-height: 200px;
+  }
 `;
 
 export const Title = styled.h2`
@@ -52,4 +60,5 @@ export const Title = styled.h2`
 export const Description = styled.p`
   font-weight: 500;
   font-size: 24px;
+  color: #626262;
 `;
