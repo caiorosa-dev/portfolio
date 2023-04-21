@@ -15,8 +15,6 @@ type Props = {
 function ProjectCard({ project, animationRef, isLeaving }: Props) {
   const [imagePath] = useImagePath(`projects/${project.image}`);
 
-  console.log(isLeaving);
-
   return (
     <Container ref={animationRef} isLeaving={isLeaving}>
       <Image src={imagePath} />

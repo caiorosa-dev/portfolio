@@ -11,14 +11,14 @@ interface HasCategory {
 
 export default function useAnimatedListByCategory(initialValue: HasCategory[] = []) {
   const [items, setItems] = useState(initialValue);
+  const [itemsToRender, setItemsToRender] = useState(initialValue);
+  const [itemsToRenderAfter, setItemsToRenderAfter] = useState(initialValue);
   const [selectedCategory, setSelectedCategory] = useState('0');
   const [pendingRemovalItemsIds, setPendingRemovalItemsIds] = useState([] as string[]);
 
   /**
    * Animated Refs
    */
-
-  console.log(selectedCategory);
 
   const animatedRefs = useRef(new Map());
   const animationEndListeners = useRef(new Map());
@@ -37,12 +37,36 @@ export default function useAnimatedListByCategory(initialValue: HasCategory[] = 
    * Functions
    */
 
-  const handleSelectCategory = useCallback((categoryId: string) => {
-    const ids = items.filter((item) => item.categoryId !== categoryId).map((item) => item.id);
+  const getItemsFromCategory = useCallback((categoryId: string): HasCategory[] => {
+    if (categoryId === '0') return items;
 
-    setSelectedCategory(categoryId);
-    setPendingRemovalItemsIds(ids);
+    return items.filter((item) => item.categoryId === categoryId);
   }, [items]);
+
+  // const getItemsToRemove = useCallback((categoryId: string) => {
+  //   if (categoryId === '0') return [];
+
+  //   return items.filter((item) => item.categoryId !== categoryId);
+  // }, [items]);
+
+  const handleSelectCategory = useCallback((categoryId: string) => {
+    if (categoryId === selectedCategory) return;
+
+    const lastCategory = selectedCategory;
+    setSelectedCategory(categoryId);
+
+    if (categoryId === '0') {
+      setItemsToRender(items);
+      setPendingRemovalItemsIds([]);
+      return;
+    }
+
+    const itemsToRemove = getItemsFromCategory(lastCategory).map((item) => item.id);
+
+    setItemsToRender(getItemsFromCategory(lastCategory));
+    setItemsToRenderAfter(getItemsFromCategory(categoryId));
+    setPendingRemovalItemsIds(itemsToRemove);
+  }, [getItemsFromCategory, items, selectedCategory]);
 
   const handleAnimationEnd = useCallback((itemId: string) => {
     const removeListener = animationEndListeners.current.get(itemId);
@@ -52,25 +76,39 @@ export default function useAnimatedListByCategory(initialValue: HasCategory[] = 
     animationEndListeners.current.delete(itemId);
 
     setPendingRemovalItemsIds((prevState) => prevState.filter((id) => id !== itemId));
-  }, []);
+
+    setItemsToRender((prevState) => {
+      const newItems = prevState.filter((item) => item.id !== itemId);
+      if (newItems.length === 0) {
+        setItemsToRenderAfter([]);
+        setPendingRemovalItemsIds([]);
+
+        return itemsToRenderAfter;
+      }
+
+      return prevState.filter((item) => item.id !== itemId);
+    });
+  }, [itemsToRenderAfter]);
 
   const renderList = useCallback((renderItem: Function, listToRender?: HasCategory[]) => {
-    const itemsList = listToRender || items;
+    const itemsList = listToRender || itemsToRender;
 
     return itemsList.map((item: any) => {
-      console.log('IDS PARA SAIR', pendingRemovalItemsIds);
-      console.log(item.id);
-
       const isLeaving = pendingRemovalItemsIds.includes(item.id);
       const animatedRef: Ref<any> = getAnimatedRef(item.id);
 
       return renderItem(item, { isLeaving, animatedRef });
     });
-  }, [getAnimatedRef, items, pendingRemovalItemsIds]);
+  }, [getAnimatedRef, itemsToRender, pendingRemovalItemsIds]);
 
   /**
    * Hooks
    */
+
+  useEffect(() => {
+    setItemsToRender(items);
+    setItemsToRenderAfter(items);
+  }, [items]);
 
   useEffect(() => {
     pendingRemovalItemsIds.forEach((itemId) => {

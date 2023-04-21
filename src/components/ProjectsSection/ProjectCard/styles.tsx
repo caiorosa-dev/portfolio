@@ -26,11 +26,11 @@ const ContainerStyle = styled.div`
   border-radius: 48px;
   box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.05);
 
-  animation: ${animationIn} 0.3s ease-out;
+  animation: ${animationIn} 0.4s ease-out;
 `;
 
 export const Container = styled(ContainerStyle)<{ isLeaving: boolean }>`
-  ${({ isLeaving }) => isLeaving && css`animation: ${animationOut} 0.3s ease-in forwards;`}
+  ${({ isLeaving }) => isLeaving && css`animation: ${animationOut} 0.4s ease-in forwards;`}
 `;
 
 export const TextsContainer = styled.div`
