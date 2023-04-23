@@ -23,11 +23,3 @@ export const Container = styled.nav`
     height: 100%;
   }
 `;
-
-export const LangButton = styled.button`
-  font-size: 20px;
-  margin: 0;
-  padding: 0;
-
-  z-index: 5;
-`;

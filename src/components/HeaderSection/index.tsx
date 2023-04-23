@@ -7,6 +7,7 @@ import RocketImage from '../../assets/images/rocket.png';
 import TitleText from '../TitleText';
 import DownArrowText from '../DownArrowText';
 import SectionContainer from '../SectionContainer';
+import useTranslationText from '../../hooks/useTranslationText';
 
 export default function HeaderSection() {
   return (
@@ -15,13 +16,13 @@ export default function HeaderSection() {
       <Background />
 
       <SectionContainer>
-        <TitleText headerText="Caio Rosa" title="Hello, I am a\nFull Stack\nDeveloper." />
+        <TitleText headerText="Caio Rosa" title={useTranslationText('headerTitle')} />
 
         <Image src={RocketImage} alt="Rocket 3d illustration" />
       </SectionContainer>
 
       <Footer>
-        <DownArrowText>Scroll Down</DownArrowText>
+        <DownArrowText>{useTranslationText('headerScrollDown')}</DownArrowText>
       </Footer>
     </LargerSection>
   );

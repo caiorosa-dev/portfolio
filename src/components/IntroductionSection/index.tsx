@@ -8,6 +8,7 @@ import { Footer, Image } from './styles';
 
 import ManOnRocketImage from '../../assets/images/man-on-rocket.png';
 import DownArrowText from '../DownArrowText';
+import useTranslationText from '../../hooks/useTranslationText';
 
 export default function IntroductionSection() {
   return (
@@ -17,18 +18,18 @@ export default function IntroductionSection() {
           <Image src={ManOnRocketImage} alt="Man on a rocket" />
         </Fade>
 
-        <TitleText headerText="But, what I do?" title="I want to make\nyour dreams\navailable to\nthe world!" margin={16}>
+        <TitleText headerText={useTranslationText('introductionHeaderText')} title={useTranslationText('introductionTitle')} margin={16}>
           <Fade top>
             <Button type="button">
               <EnvelopeIcon className="icon" />
-              <Fade top cascade>Contact Me</Fade>
+              <Fade top cascade>{useTranslationText('introductionButton')}</Fade>
             </Button>
           </Fade>
         </TitleText>
       </SectionContainer>
 
       <Footer>
-        <DownArrowText>Keep Scrolling</DownArrowText>
+        <DownArrowText>{useTranslationText('introductionScrollMessage')}</DownArrowText>
       </Footer>
     </Section>
   );

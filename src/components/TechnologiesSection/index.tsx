@@ -7,12 +7,13 @@ import { Container, CardList } from './styles';
 import FlashIcon from '../../assets/images/flash.png';
 import ComputerIcon from '../../assets/images/computer.png';
 import GearIcon from '../../assets/images/gear.png';
+import useTranslationText from '../../hooks/useTranslationText';
 
 export default function TechnologiesSection() {
   return (
     <Section>
       <Container>
-        <TitleText headerText="About my work" title="Technologies that i use" />
+        <TitleText headerText={useTranslationText('technologiesHeader')} title={useTranslationText('technologiesTitle')} />
         <CardList>
           <Card name="Langs & Tools" icon={FlashIcon} color="#EF4444">
             <Fade top cascade>
