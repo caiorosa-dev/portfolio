@@ -1,6 +1,6 @@
 import Fade from 'react-reveal/Fade';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from './styles';
 
 export default function LangButton() {
@@ -8,9 +8,15 @@ export default function LangButton() {
 
   const [show, setShow] = useState(true);
 
-  function handleChangeLanguage() {
+  function runShow() {
     setShow((state) => !state);
 
+    setTimeout(() => {
+      setShow((state) => !state);
+    }, 100);
+  }
+
+  function handleChangeLanguage() {
     const { language } = i18n;
     let languageToBeSet = 'en';
 
@@ -19,10 +25,12 @@ export default function LangButton() {
     }
 
     i18n.changeLanguage(languageToBeSet);
-    setTimeout(() => {
-      setShow((state) => !state);
-    }, 100);
+    runShow();
   }
+
+  useEffect(() => {
+    runShow();
+  }, []);
 
   return (
     <Button type="button" onClick={handleChangeLanguage}>
