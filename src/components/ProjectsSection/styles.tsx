@@ -14,11 +14,12 @@ export const NavBar = styled.nav`
 `;
 
 export const ProjectsContainer = styled.div`
-  display: grid;
+  display: flex;
   width: 100%;
-  justify-content: center;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 128px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 128px;
+
   @media (max-width: 1200px) {
     grid-template-columns: 1fr;
   }
