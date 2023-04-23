@@ -9,6 +9,7 @@ import {
 import ProjectCard from './ProjectCard';
 import { Category, Project } from './types';
 import useAnimatedListByCategory from '../../hooks/useAnimatedListByCategory';
+import useTranslationText from '../../hooks/useTranslationText';
 
 export default function ProjectsSection() {
   const [selectedCategory, setSelectedCategory] = useState('0');
@@ -45,12 +46,12 @@ export default function ProjectsSection() {
     <Section>
       <Container>
         <header>
-          <TitleText headerText="My portfolio" title="Look at my projects" />
+          <TitleText headerText={useTranslationText('projectsHeader')} title={useTranslationText('projectsTitle')} />
           <NavBar>
             <Fade top cascade>
               <NavItem key="0" selected={isSelected('0')} onClick={() => selectCategory('0')}>
                 <Fade top cascade>
-                  All
+                  {useTranslationText('projectsAllOption')}
                 </Fade>
               </NavItem>
             </Fade>

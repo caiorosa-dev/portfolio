@@ -17,6 +17,6 @@ export const CardList = styled.div`
   grid-gap: 72px;
 
   @media (max-width: 1200px) {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 `;

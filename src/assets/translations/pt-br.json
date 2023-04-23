@@ -1,0 +1,18 @@
+{
+  "langName": "Português",
+
+  "headerTitle": "Olá, eu sou um\nDesenvolvedor\nFull Stack.",
+  "headerScrollDown": "Desça a página",
+
+  "introductionHeaderText": "Mas, o que eu faço?",
+  "introductionTitle": "Eu transformo\nos seus sonhos\nem projetos\npro mundo!",
+  "introductionButton": "Entre em contato",
+  "introductionScrollMessage": "Continue indo",
+
+  "technologiesHeader": "Sobre o meu trabalho",
+  "technologiesTitle": "Tecnologias que uso",
+
+  "projectsHeader": "Meu portfolio",
+  "projectsTitle": "Veja os meus projetos",
+  "projectsAllOption": "Todos"
+}

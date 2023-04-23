@@ -25,6 +25,7 @@ const animationOut = keyframes`
 const ContainerStyle = styled.div`
   border-radius: 48px;
   box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.05);
+  max-width: 640px;
 
   animation: ${animationIn} 0.4s ease-out;
 `;
@@ -39,17 +40,34 @@ export const TextsContainer = styled.div`
 
 export const Image = styled.img`
   position: relative;
-  height: 360px;
+  max-height: 360px;
   border-top-left-radius: 48px;
   border-top-right-radius: 48px;
+
+  @media (max-width: 1200px) {
+    max-height: 270px;
+  }
+
+  @media (max-width: 500px) {
+    max-height: 180px;
+  }
 `;
 
 export const Title = styled.h2`
   font-size: 48px;
   font-weight: 600;
+
+  @media (max-width: 500px) {
+    font-size: 32px;
+  }
 `;
 
 export const Description = styled.p`
   font-weight: 500;
   font-size: 24px;
+  color: #626262;
+
+  @media (max-width: 500px) {
+    font-size: 20px;
+  }
 `;

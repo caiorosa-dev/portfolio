@@ -30,6 +30,6 @@ export const Image = styled.img`
   }
 
   @media (max-width: 500px) {
-    height: 100vw;
+    height: 95vw;
   }
 `;

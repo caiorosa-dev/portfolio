@@ -32,8 +32,8 @@ export default function TitleText({
 
       <Titles margin={margin}>
         { title.split('\\n').map((value, i) => (
-          <Fade top cascade>
-            <Title key={i}>{value}</Title>
+          <Fade top cascade key={i}>
+            <Title>{value}</Title>
           </Fade>
         )) }
       </Titles>
