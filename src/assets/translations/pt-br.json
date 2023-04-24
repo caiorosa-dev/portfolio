@@ -14,5 +14,7 @@
 
   "projectsHeader": "Meu portfolio",
   "projectsTitle": "Veja os meus projetos",
-  "projectsAllOption": "Todos"
+  "projectsAllOption": "Todos",
+  "projectPreviewButton": "Acessar",
+  "projectGithubButton": "Github"
 }

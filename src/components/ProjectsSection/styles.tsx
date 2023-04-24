@@ -14,6 +14,7 @@ export const NavBar = styled.nav`
 `;
 
 export const ProjectsContainer = styled.div`
+  position: relative;
   display: flex;
   width: 100%;
   justify-content: space-between;
