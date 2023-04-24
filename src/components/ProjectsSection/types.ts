@@ -9,4 +9,6 @@ export type Project = {
   description: string;
   categoryId: string;
   image: string;
+  previewLink: string;
+  githubLink: string;
 };
