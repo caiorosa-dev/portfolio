@@ -1,15 +1,15 @@
 /* eslint-disable global-require */
 import { useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
-import Section from '../Section';
-import TitleText from '../TitleText';
+import Section from '../../Section';
+import TitleText from '../../TitleText';
 import {
   Container, NavBar, NavItem, ProjectsContainer,
 } from './styles';
 import ProjectCard from './ProjectCard';
 import { Category, Project } from './types';
-import useAnimatedListByCategory from '../../hooks/useAnimatedListByCategory';
-import useTranslationText from '../../hooks/useTranslationText';
+import useAnimatedListByCategory from '../../../hooks/useAnimatedListByCategory';
+import useTranslationText from '../../../hooks/useTranslationText';
 
 export default function ProjectsSection() {
   const [selectedCategory, setSelectedCategory] = useState('0');
@@ -31,8 +31,8 @@ export default function ProjectsSection() {
 
   useEffect(() => {
     async function loadFiles() {
-      const loadedCategories = await import('../../assets/data/categories.json');
-      const loadedProjects = await import('../../assets/data/projects.json');
+      const loadedCategories = await import('../../../assets/data/categories.json');
+      const loadedProjects = await import('../../../assets/data/projects.json');
       setSelectedCategory('0');
 
       setCategories(loadedCategories.default);

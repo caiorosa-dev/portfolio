@@ -25,6 +25,10 @@ const Button = styled.button`
   :active {
     background: #3f38b8;
   }
+
+  :focus {
+    background: #3f38b8;
+  }
 `;
 
 export default Button;

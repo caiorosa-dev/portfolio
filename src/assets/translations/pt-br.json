@@ -12,9 +12,17 @@
   "technologiesHeader": "Sobre o meu trabalho",
   "technologiesTitle": "Tecnologias que uso",
 
-  "projectsHeader": "Meu portfolio",
+  "projectsHeader": "Meu portfolio, existem outros em meu github",
   "projectsTitle": "Veja os meus projetos",
   "projectsAllOption": "Todos",
   "projectPreviewButton": "Acessar",
-  "projectGithubButton": "Github"
+  "projectGithubButton": "Github",
+
+  "footerHeader": "Meus contatos",
+  "footerTitle": "Bora conversar e\nse conhecer.",
+  "footerMessage": "Eu adoraria bater um papo e ver o que podemos construir juntos.",
+  "formName": "Nome",
+  "formEmail": "Email",
+  "formMessage": "Mensagem",
+  "formSubmitButton": "Enviar"
 }

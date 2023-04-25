@@ -1,12 +1,12 @@
 import Fade from 'react-reveal/Fade';
 import { Ref } from 'react';
-import useImagePath from '../../../hooks/useImagePath';
+import useImagePath from '../../../../hooks/useImagePath';
 import { Project } from '../types';
 import {
   BubbleButton,
   Container, Description, Image, OverlayContainer, TextsContainer, Title,
 } from './styles';
-import useTranslationText from '../../../hooks/useTranslationText';
+import useTranslationText from '../../../../hooks/useTranslationText';
 
 type Props = {
   project: Project;
