@@ -28,7 +28,9 @@ export default function FormHeader() {
           </Fade>
         </IconWithText>
       </TextsContainer>
-      <Image src={imagePath} />
+      <Fade top cascade>
+        <Image src={imagePath} />
+      </Fade>
     </Container>
   );
 }
