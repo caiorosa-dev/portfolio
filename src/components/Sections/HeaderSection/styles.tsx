@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Section from '../Section';
+import Section from '../../Section';
 
 export const LargerSection = styled(Section)`
   @media (max-width: 768px) {

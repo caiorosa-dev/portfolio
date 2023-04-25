@@ -1,8 +1,9 @@
 import GlobalStyle from '../../assets/styles/global';
-import HeaderSection from '../HeaderSection';
-import IntroductionSection from '../IntroductionSection';
-import ProjectsSection from '../ProjectsSection';
-import TechnologiesSection from '../TechnologiesSection';
+import FooterSection from '../Sections/FooterSection';
+import HeaderSection from '../Sections/HeaderSection';
+import IntroductionSection from '../Sections/IntroductionSection';
+import ProjectsSection from '../Sections/ProjectsSection';
+import TechnologiesSection from '../Sections/TechnologiesSection';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <IntroductionSection />
       <TechnologiesSection />
       <ProjectsSection />
+      <FooterSection />
     </>
   );
 }

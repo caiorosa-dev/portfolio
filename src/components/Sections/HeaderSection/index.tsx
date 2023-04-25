@@ -3,13 +3,15 @@ import {
   Background, Footer, Image, LargerSection,
 } from './styles';
 
-import RocketImage from '../../assets/images/rocket.png';
-import TitleText from '../TitleText';
-import DownArrowText from '../DownArrowText';
-import SectionContainer from '../SectionContainer';
-import useTranslationText from '../../hooks/useTranslationText';
+import TitleText from '../../TitleText';
+import DownArrowText from '../../DownArrowText';
+import SectionContainer from '../../SectionContainer';
+import useTranslationText from '../../../hooks/useTranslationText';
+import useImagePath from '../../../hooks/useImagePath';
 
 export default function HeaderSection() {
+  const [imagePath] = useImagePath('rocket.png');
+
   return (
     <LargerSection>
       <Header />
@@ -18,7 +20,7 @@ export default function HeaderSection() {
       <SectionContainer>
         <TitleText headerText="Caio Rosa" title={useTranslationText('headerTitle')} />
 
-        <Image src={RocketImage} alt="Rocket 3d illustration" />
+        <Image src={imagePath} alt="Rocket 3d illustration" />
       </SectionContainer>
 
       <Footer>
