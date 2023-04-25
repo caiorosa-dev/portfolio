@@ -12,7 +12,7 @@
   "technologiesHeader": "Sobre o meu trabalho",
   "technologiesTitle": "Tecnologias que uso",
 
-  "projectsHeader": "Meu portfolio, existem outros em meu github",
+  "projectsHeader": "Meu portfolio",
   "projectsTitle": "Veja os meus projetos",
   "projectsAllOption": "Todos",
   "projectPreviewButton": "Acessar",
@@ -24,5 +24,7 @@
   "formName": "Nome",
   "formEmail": "Email",
   "formMessage": "Mensagem",
-  "formSubmitButton": "Enviar"
+  "formSubmitButton": "Enviar",
+  "footerMadeByMessage": "Design e desenvolvimento feitos por Caio Rosa",
+  "backToTopText": "Voltar para o inicio"
 }

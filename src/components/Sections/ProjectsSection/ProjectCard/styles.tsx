@@ -60,6 +60,13 @@ export const OverlayContainer = styled.div`
     }
   }
 
+  :focus {
+    opacity: 1;
+    a {
+      transform: scale(1);
+    }
+  }
+
   @media (max-width: 1200px) {
     max-height: 270px;
   }
