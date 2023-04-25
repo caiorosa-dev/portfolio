@@ -1,3 +1,4 @@
+import Fade from 'react-reveal/Fade';
 import useTranslationText from '../../../hooks/useTranslationText';
 import SectionContainer from '../../SectionContainer';
 import SocialButton from '../../SocialButton';
@@ -29,9 +30,15 @@ export default function FooterSection() {
           <FormHeader />
           <Form />
           <ButtonsContainer>
-            <SocialButton href="https://www.linkedin.com/in/caiorosa-dev/" target="_blank">Linkedin</SocialButton>
-            <SocialButton href="https://github.com/caiorosa-dev" target="_blank">Github</SocialButton>
-            <SocialButton onClick={() => copyToClipboard('Caio Rosa#9999')}>Discord</SocialButton>
+            <SocialButton href="https://www.linkedin.com/in/caiorosa-dev/" target="_blank">
+              <Fade top cascade>Linkedin</Fade>
+            </SocialButton>
+            <SocialButton href="https://github.com/caiorosa-dev" target="_blank">
+              <Fade top cascade>Github</Fade>
+            </SocialButton>
+            <SocialButton onClick={() => copyToClipboard('Caio Rosa#9999')}>
+              <Fade top cascade>Discord</Fade>
+            </SocialButton>
           </ButtonsContainer>
         </Container>
       </SectionContainer>
