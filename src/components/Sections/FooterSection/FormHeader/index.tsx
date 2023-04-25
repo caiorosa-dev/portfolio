@@ -15,11 +15,11 @@ export default function FormHeader() {
       <TextsContainer>
         <div>
           <TitleText headerText={useTranslationText('footerHeader')} title={useTranslationText('footerTitle')} />
-          <Text>
-            <Fade top cascade>
+          <Fade top cascade>
+            <Text>
               {useTranslationText('footerMessage')}
-            </Fade>
-          </Text>
+            </Text>
+          </Fade>
         </div>
         <IconWithText>
           <EnvelopeIcon className="icon" />

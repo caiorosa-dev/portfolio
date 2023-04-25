@@ -1,7 +1,7 @@
 import { ChatBubbleBottomCenterTextIcon, EnvelopeIcon, UserIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import Input from '../../../Input';
-import FormGroup from '../FormGroup';
+import FormGroup from './FormGroup';
 import { Container } from './styles';
 import Button from '../../../Button';
 import TextArea from '../../../TextArea';
