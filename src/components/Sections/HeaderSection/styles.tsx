@@ -48,8 +48,8 @@ export const Image = styled.img`
   transform: translateX(110px);
 
   @media (max-width: 1540px) {
-    height: 37vw;
-    transform: translateX(50px);
+    height: 40vw;
+    transform: translateY(100px);
   }
 
   @media (max-width: 768px) {
