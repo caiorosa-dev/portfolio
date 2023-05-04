@@ -29,6 +29,10 @@ const ContainerStyle = styled.div`
   max-width: 640px;
 
   animation: ${animationIn} 0.4s ease-out;
+
+  @media (max-width: 1550px) {
+    max-width: 600px;
+  }
 `;
 
 export const Container = styled(ContainerStyle)<{ isLeaving: boolean }>`
@@ -65,6 +69,10 @@ export const OverlayContainer = styled.div`
     a {
       transform: scale(1);
     }
+  }
+
+  @media (max-width: 1550px) {
+    max-height: 336px;
   }
 
   @media (max-width: 1200px) {
