@@ -30,7 +30,7 @@ export const ButtonsContainer = styled.div`
   }
 `;
 
-export const FooterContainer = styled.div`
+export const FooterContainer = styled.footer`
   margin-top: 192px;
   background: #1E1E1E;
   width: 100%;
@@ -38,6 +38,13 @@ export const FooterContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 700px) {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+  }
 `;
 
 export const FooterText = styled.p`
@@ -52,5 +59,9 @@ export const BackToTop = styled(FooterText)`
   :hover {
     cursor: pointer;
     opacity: 0.5;
+  }
+
+  @media (max-width: 700px) {
+    text-decoration: underline;
   }
 `;
