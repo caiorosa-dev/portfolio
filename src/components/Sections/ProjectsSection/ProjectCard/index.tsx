@@ -4,7 +4,12 @@ import useImagePath from '../../../../hooks/useImagePath';
 import { Project } from '../types';
 import {
   BubbleButton,
-  Container, Description, Image, OverlayContainer, TextsContainer, Title,
+  Container,
+  Description,
+  Image,
+  OverlayContainer,
+  TextsContainer,
+  Title,
 } from './styles';
 import useTranslationText from '../../../../hooks/useTranslationText';
 
@@ -17,16 +22,34 @@ type Props = {
 function ProjectCard({ project, animationRef, isLeaving }: Props) {
   const [imagePath] = useImagePath(`projects/${project.image}`);
 
+  const githubText = useTranslationText('projectGithubButton');
+
   return (
     <Container ref={animationRef} isLeaving={isLeaving}>
       <Image src={imagePath} />
       <TextsContainer>
-        <Title><Fade top cascade>{ project.name }</Fade></Title>
-        <Fade top cascade><Description>{ project.description }</Description></Fade>
+        <Title>
+          <Fade top cascade>
+            {project.name}
+          </Fade>
+        </Title>
+        <Fade top cascade>
+          <Description>{project.description}</Description>
+        </Fade>
       </TextsContainer>
       <OverlayContainer className="project-overlay">
-        <BubbleButton href={project.githubLink} target="_blank"><Fade top cascade>{useTranslationText('projectGithubButton')}</Fade></BubbleButton>
-        <BubbleButton href={project.previewLink} target="_blank"><Fade top cascade>{useTranslationText('projectPreviewButton')}</Fade></BubbleButton>
+        {project.githubLink && (
+          <BubbleButton href={project.githubLink} target="_blank">
+            <Fade top cascade>
+              {githubText}
+            </Fade>
+          </BubbleButton>
+        )}
+        <BubbleButton href={project.previewLink} target="_blank">
+          <Fade top cascade>
+            {useTranslationText('projectPreviewButton')}
+          </Fade>
+        </BubbleButton>
       </OverlayContainer>
     </Container>
   );
