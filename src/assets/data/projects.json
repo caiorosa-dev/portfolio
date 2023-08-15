@@ -10,6 +10,14 @@
   },
   {
     "id": "2",
+    "image": "mafia-community.png",
+    "name": "Mafia Community",
+    "description": "E-Commerce project. Built with NextJS, TailwindCSS, AdonisJS and PostgreSQL.",
+    "categoryId": "1",
+    "previewLink": "https://beta.brasilcsgo.com.br"
+  },
+  {
+    "id": "3",
     "image": "portfolio.png",
     "name": "Portfolio",
     "description": "Built with ReactJS.",
@@ -18,7 +26,7 @@
     "githubLink": "https://github.com/caiorosa-dev/portfolio"
   },
   {
-    "id": "3",
+    "id": "4",
     "image": "to-do-app.png",
     "name": "To do App",
     "description": "Built using AdonisJS, NuxtJS, MySQL and Typescript.",
